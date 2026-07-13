@@ -79,7 +79,7 @@ python tests/test_core.py
 
 ---
 
-## What each file does (for your demo write-up)
+## What each file does 
 
 ### `noisereducecustom/__init__.py`
 The package's front door. Imports and re-exports the public functions
