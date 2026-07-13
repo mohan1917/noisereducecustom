@@ -2,14 +2,13 @@
 
 A fully self-contained, from-scratch spectral-gating noise reduction
 library for audio, built only on `numpy` and `scipy` (`matplotlib` is
-optional, for plotting). It does not import or wrap the third-party
-`noisereduce` package in any way — so it keeps working even if that
-project is ever pulled from PyPI, paywalled, or relicensed.
+optional, for plotting). It keeps working even if that
+project(package) is ever pulled from PyPI, paywalled, or relicensed.
 
-## Folder layout (this is the ONLY package folder you need)
+## Folder layout
 ```
-noisereducecustom_pkg/          <- unzip and cd into THIS folder
-├── noisereducecustom/          <- the actual importable package
+noisereducecustom_pkg/          
+├── noisereducecustom/          
 │   ├── __init__.py
 │   ├── utils.py
 │   ├── stft_utils.py
@@ -27,7 +26,7 @@ noisereducecustom_pkg/          <- unzip and cd into THIS folder
 └── LICENSE
 ```
 
-## Install (local, editable)
+## Install
 ```bash
 cd noisereducecustom_pkg      # the folder containing pyproject.toml
 pip install -e .
@@ -39,8 +38,7 @@ Verify it installed correctly:
 ```bash
 python -c "import noisereducecustom as nrc; print(nrc.__version__)"
 ```
-This should print `0.2.0` with no errors, from **any** directory (not
-just inside the package folder).
+This should print `0.2.0` with no errors, from **any** directory
 
 ## Quick usage
 ```python
@@ -149,8 +147,7 @@ for generating a synthetic `y_noise` profile clip.
 
 ### `noisereducecustom/plotting.py`
 Optional (matplotlib-only) visualization helpers: `plot_spectrogram`,
-`plot_before_after`, `plot_waveform_comparison`. Purely for demos and
-sanity-checking — not used internally by the noise reduction itself.
+`plot_before_after`, `plot_waveform_comparison`. 
 
 ### `tests/test_core.py`
 Automated checks: stationary/non-stationary modes, mono, stereo,
